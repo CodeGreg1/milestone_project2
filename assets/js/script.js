@@ -7,7 +7,7 @@ const gameScore = document.getElementById('gameScore')
 const nums = document.querySelectorAll('.nums span')
 const counter = document.querySelector('.counter')
 const replay = document.querySelector('#replay')
-var positionNum = 5
+var positionNum = 5;
 const target2 = document.getElementById('targettwo')
 const target1 = document.getElementById('targetone')
 const target3 = document.getElementById('targetthree')
@@ -27,11 +27,6 @@ const targets = document.querySelectorAll('.target')
 targets.forEach((target)=>{
     target.addEventListener('click',()=> {
         target.classList.toggle('active')
-        // if (target1.classList = 'target active'){
-        //     console.log('Back Row target')
-        // } else if (target2.classList = 'target active'){
-        //     console.log('Middle Row target')
-        // }
         gunSound()
         incrementScore()
     	setTimeout(newPosition, 300)})
@@ -43,25 +38,13 @@ function newPosition(){
         activeTarget.classList.toggle('active')
     }
 
-
-// //These are the 3 functions for new positions of the targets after they have been shot down
-// function newPos1() {
-//     target1.style.left = `${(Math.floor(Math.random() * 398) + 1)}px`;
-//     target1.classList.toggle('active')}
-// function newPos2() {
-//     target2.style.left = `${(Math.floor(Math.random() * 418) + 1)}px`;
-//     target2.classList.toggle('active')}
-// function newPos3() {
-//     target3.style.left = `${(Math.floor(Math.random() * 438) + 1)}px`;
-//     target3.classList.toggle('active')}
-
-
 //This function creates the gunshot sound and plays even if another shot has been made as it pauses then restarts each time
 function gunSound() {
 	const gunShot = document.getElementById('gun')
 	gunShot.pause()
 	gunShot.currentTime=0;
 	gunShot.play()
+    console.log('gun shot ran')
     }
 
 //This function increments the score which is linked with the event listeners for the clicking of targets.
