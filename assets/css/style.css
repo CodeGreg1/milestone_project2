@@ -60,7 +60,7 @@ body {
     align-items: center;
     justify-content: center;
     margin: auto;  
-    background-image: url(targetshooting.jpeg) ;
+    background-image: url(/assets/media/targetshooting.jpeg) ;
     background-color: white;
     background-position: center; 
     background-repeat: no-repeat; 
@@ -368,7 +368,7 @@ span.circle {
 .header {
     width: 400px;
     height: 150px;
-    background-image: url(carnivalbackground.png) ;
+    background-image: url(/assets/media/carnivalbackground.png) ;
     background-color: white;
     background-position: center; 
     background-repeat: no-repeat; 
