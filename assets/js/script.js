@@ -13,8 +13,7 @@ const target1 = document.getElementById('targetone')
 const target3 = document.getElementById('targetthree')
 
 target1.addEventListener('click',()=> {
-    positionNum = 298
-    console.log('t1')})
+    positionNum = 298})
 target2.addEventListener('click',()=> {
     positionNum = 318})
 target3.addEventListener('click',()=> {

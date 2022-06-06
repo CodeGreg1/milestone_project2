@@ -368,7 +368,7 @@ span.circle {
 .header {
     width: 400px;
     height: 150px;
-    background-image: url(assets/media/carnivalbackground.png) ;
+    background-image: url(/assets/media/carnivalbackground.png) ;
     background-color: white;
     background-position: center; 
     background-repeat: no-repeat; 
