@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Sancreek&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+	background-color: #fff;
+    font-family: 'Sancreek', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    cursor: pointer;
+}
+.container {
+    width: 401px;
+    height: 300px;
+    background-color: #ff0000;
+    color: #f00;
+    opacity: 0.8;
+    background-image: linear-gradient(to right, #fff, #fff 20px, #ff0000 20px, #ff0000 );
+    background-size: 40px 100%;
+    cursor: crosshair;
+    z-index: 1;
+}
+.levels {
+    width: 500px;
+    border: 10px solid rgb(95, 50, 20);
+    border-radius: 10px;
+    position: relative;
+    bottom: 0px;
+    width: 101%; 
+    box-shadow: inset 3px 3px 1px 3px #301111;
+}
+#frontrow {
+    height: 120px;
+    z-index: 4;
+    bottom: -180px;
+}
+#middlerow {
+    height: 210px;
+    z-index: 3;
+    bottom: 30px;
+}
+#rearrow {
+    height: 300px;
+    z-index: 2;
+    bottom: 330px;
+}
+.target {
+    border-radius: 50%;
+    border: 1px solid black;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: auto;  
+    background-image: url(targetshooting.jpeg) ;
+    background-color: white;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: contain;
+    box-shadow: 2px 1px 1px 1px #000000;  
+}
+
+.instructions {
+    height: 80px;
+    width: 80px;
+    bottom: 20px;
+    left: 40%;
+}
+
+h1 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 30px;
+    text-shadow: 2px 2px 2px #CE5937;
+}
+ 
+p {
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    width: 100%;
+    padding: 20px;
+}
+
+#targetone {
+    height: 80px;
+    width: 80px;
+    bottom: 0px;
+    left: 149px;
+    z-index: 20;
+}
+#targettwo {
+    height: 60px;
+    width: 60px;
+    bottom: 110px;
+    left: 159px;
+    z-index: 15;
+}
+#targetthree {
+    height: 40px;
+    width: 40px;
+    bottom: 200px;
+    left: 169px;
+    z-index: 10;
+}
+#targetone.active, #targettwo.active, #targetthree.active{
+    transition: height 0.1s ease;
+    height: 2px;
+}
+
+.active {
+    transition: all 1000ms ease-in-out;
+}
+h2 {
+    font-family: 'Sancreek', cursive;
+	font-size: 65px;
+    
+}
+h2.hit {
+    font-size: 70px;
+    transition: all 0.1s ease-in-out;
+}
+
+.centertarget {
+    height: 21%;
+    width: 21%;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 10;
+}
+h2#score {
+    margin: 30px 0 10px;
+}
+#score {
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    text-shadow: 2px 2px 2px #CE5937;
+}
+#flexbox {
+    top: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+span {
+    text-shadow: 2px 2px 2px #CE5937;
+}
+
+#scorescreen { 
+    width: 409px;
+    height: 470px;
+    background-color: #edd7bd;
+    border: 10px solid #D45A4d;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    text-align: center;
+    opacity: 1;
+    left: 50%;
+    bottom: -120px;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 3;
+} 
+ 
+#prestart {
+    width: 409px;
+    height: 600px;
+    max-width: 409px;
+    background-color: #edd7bd;
+    border: 10px solid #D45A4d;
+    border-radius: 5%;
+    display: flex;
+    position: absolute;
+    text-align: center;
+    opacity: 1;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 3;
+}
+
+.hiddenscore {
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
+}
+ 
+#gameScore {
+    font-size: 40px;
+    color: red;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+
+h4 {
+    font-family: 'Sancreek', cursive;
+    font-size: 20px;
+    margin: 5px;
+    text-transform: uppercase;
+    top: 40px;
+    position: relative;
+    right: -50px;
+}

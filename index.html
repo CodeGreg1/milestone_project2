@@ -41,6 +41,44 @@
                     <h4>Shoot to Start!</h4>
             </div>   
     </div>
+    <div class='container ripple'>
+        <audio id="gun" preload="auto">
+            <source src="gunshort.m4a" volume="60"></audio>
+        <div id='frontrow' class="levels">
+            <div id="targetone" class="target">
+                <div class="centertarget"></div>
+            </div>
+        </div>
+        <div id='middlerow' class="levels">
+            <div id="targettwo" class="target">
+                <div class="centertarget"></div>
+            </div>
+        </div>
+        <div id='rearrow' class="levels">
+            <div id="targetthree"class="target">
+                <div class="centertarget"></div>
+            </div>
+        </div>
+    </div>
+    <div id="scorescreen" class="hiddenscore">
+        <div id="gameScore"></div>
+        <div>
+            <button id="replay">
+                <span>Replay</span>
+            </button>
+        </div>
+    </div>
+    <div id="prestart" class="visible">
+        <div>
+            <h3>Instructions to play</h3>
+            <p>Simply hit the targets and make them drop as quickly as you can.</p>
+            <div class="target instructions">
+                <div class="centertarget"></div>
+            </div>
+
+        <p>Click Anywhere to start!</p> 
+        </div>
+    </div>
     <script src="assets/js/script.js"></script>
 </body>
 </html>
