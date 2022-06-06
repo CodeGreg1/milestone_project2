@@ -216,3 +216,165 @@ h4 {
     position: relative;
     right: -50px;
 }
+.counter {
+    position: fixed;
+    text-align: center;
+    height: 140px;
+}
+.counter.hide {
+    transform: scale(0);
+    animation: hide 0.2s ease-out;
+}
+
+@keyframes hide {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+.final {
+    position: relative;
+    transform: scale(0);
+    text-align: center;
+}
+  
+.final.show {
+    transform: scale(1);
+    animation: show 0.2s ease-out;
+}
+@keyframes show {
+    0% {
+    transform: scale(0);
+    }
+    30% {
+    transform: scale(1.4);
+    }
+    100% {
+    transform: scale(1);
+    }
+}  
+.nums {
+    color: #ff0000;
+    font-size: 50px;
+    position: relative;
+    overflow: hidden;
+    width: 250px;
+    height: 50px;
+    top: 40px;
+    right: -50px;
+} 
+.nums span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(150deg);
+    transform-origin: bottom center;
+} 
+.nums span.in {
+    transform: translate(-50%, -50%) rotate(0deg);
+    animation: goIn 0.5s ease-in-out;
+}  
+.nums span.out {
+    animation: goOut 0.5s ease-in-out;
+}
+@keyframes goIn {
+    0% {
+    transform: translate(-50%, -50%) rotate(150deg);
+    } 
+    30% {
+    transform: translate(-50%, -50%) rotate(-20deg);
+    }
+    60% {
+    transform: translate(-50%, -50%) rotate(10deg);
+    }
+    100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+    }
+}  
+@keyframes goOut {
+    0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+    }
+    60% {
+    transform: translate(-50%, -50%) rotate(20deg);
+    }
+    100% {
+    transform: translate(-50%, -50%) rotate(-200deg);
+    }
+}  
+#replay {
+    background-color: #3498db;
+    border-radius: 3px;
+    border: none;
+    color: aliceblue;
+    padding: 5px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    margin: 10px;
+} 
+#replay span{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+} 
+#replay span:after{
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+} 
+#replay:hover span{
+    padding-right: 25px;
+}
+#replay:hover span:after{
+    opacity: 0;
+    right: 0;
+}
+
+/*---Red bullet fire--*/
+
+.container .circle {
+    position: absolute;
+    background-color: rgb(58, 58, 58);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    transform: scale(2);
+    animation: scale 0.8s ease-out;
+    cursor:crosshair;
+}
+
+span.circle {
+    position: absolute;
+    background-color: rgb(58, 58, 58);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(2);
+    animation: scale 0.8s ease-out;
+    cursor:crosshair;
+}
+
+@keyframes scale {
+    to {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0.5;
+    }
+}
+
+.header {
+    width: 400px;
+    height: 150px;
+    background-image: url(carnivalbackground.png) ;
+    background-color: white;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
