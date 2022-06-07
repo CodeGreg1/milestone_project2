@@ -26,12 +26,9 @@ const targets = document.querySelectorAll('.target')
 targets.forEach((target)=>{
     target.addEventListener('click',()=> {
         target.classList.toggle('active')
-        const gunShot = document.getElementById('gun')
-    	gunShot.pause()
-	    gunShot.currentTime=0;
-	    gunShot.play()
+        gunSound()
         incrementScore()
-    	setTimeout(newPosition, 300)})
+    	setTimeout(newPosition, 100)})
     })
 
 function newPosition(){
@@ -42,7 +39,10 @@ function newPosition(){
 
 //This function creates the gunshot sound and plays even if another shot has been made as it pauses then restarts each time
 function gunSound() {
-	
+	const gunShot = document.getElementById('gun')
+    gunShot.pause()
+	gunShot.currentTime=0;
+	gunShot.play()
     console.log('gun shot ran')
     }
 
