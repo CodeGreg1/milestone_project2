@@ -157,29 +157,11 @@ span {
     text-shadow: 2px 2px 2px #CE5937;
 }
 
-#scorescreen { 
-    width: 409px;
-    height: 470px;
-    background-color: #edd7bd;
-    border: 10px solid #D45A4d;
-    border-radius: 5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    text-align: center;
-    opacity: 1;
-    left: 50%;
-    bottom: -120px;
-    transform: translateX(-50%) translateY(-50%);
-    z-index: 3;
-} 
- 
-#prestart {
-    width: 409px;
-    height: 600px;
-    max-width: 409px;
+.popupScreen {
+    width: 100vw;
+    height: 100vh;
+    max-width: 500px;
+    max-height: 700px;
     background-color: #edd7bd;
     border: 10px solid #D45A4d;
     border-radius: 5%;
@@ -192,6 +174,11 @@ span {
     transform: translateX(-50%) translateY(-50%);
     z-index: 3;
 }
+#scorescreen { 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} 
 
 .hiddenscore {
     visibility: hidden;
@@ -366,10 +353,20 @@ span.circle {
 }
 
 .header {
-    width: 400px;
+    width: 390px;
     height: 150px;
     background-image: url(../media/carnivalbackground.png) ;
-    background-color: white;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.headerfront {
+    height: 150px;
+    background-image: url(../media/carnivalbackground.png) ;
     background-position: center; 
     background-repeat: no-repeat; 
     background-size: contain;
