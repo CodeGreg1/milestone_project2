@@ -375,3 +375,29 @@ span.circle {
     align-items: center;
     justify-content: center;
 }
+
+.targetstart {
+    height: 80px;
+    width: 80px;
+    left: 40%;
+    border-radius: 50%;
+    border: 1px solid black;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: auto;  
+    background-image: url(../media/targetshooting.jpeg) ;
+    background-color: white;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: contain;
+    box-shadow: 2px 1px 1px 1px #000000;  
+}
+
+.signature {
+    font-size: x-small;
+    position: absolute;
+    bottom: 0%;
+}
