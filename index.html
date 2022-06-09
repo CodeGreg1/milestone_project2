@@ -14,6 +14,7 @@
         <span><h1>Carnival Shooting Gallery</h1></span>
     </div>
 	<div id='flexbox'>
+            <h2 id="perfectScore">0</h2>
             <h2 id="score">0</h2>
             <div class="counter">
                 <div class="nums">
@@ -37,8 +38,8 @@
                       <span>3</span>
                       <span>2</span>
                       <span>1</span>
-                    </div>
-                    <h4>Shoot to Start!</h4>
+                </div>
+                <h4>Shoot to Start!</h4>
             </div>   
     </div>
     <div class='container ripple'>
@@ -46,19 +47,33 @@
             <source src="gunshort.mp3" type="audio/mpeg">
         </audio>
         <div id='frontrow' class="levels">
-            <div id="targetone" class="target">
+            <div id="targetone" class="target tstyle">
                 <div class="centertarget"></div>
             </div>
         </div>
         <div id='middlerow' class="levels">
-            <div id="targettwo" class="target">
+            <div id="targettwo" class="target tstyle">
                 <div class="centertarget"></div>
             </div>
         </div>
         <div id='rearrow' class="levels">
-            <div id="targetthree"class="target">
+            <div id="targetthree"class="target tstyle">
                 <div class="centertarget"></div>
             </div>
+        </div>
+    </div> 
+    <div id="prestart" class="popupScreen visible">
+        <div>
+            <span class="header">
+                <h1>Carnival Shooting Gallery</h1>
+            </span>
+            <h3>Instructions to play</h3>
+            <p>Hit the targets and make them drop as quickly as you can.</p>
+            <p>Double points if you hit the centre!</p>
+            <p><b>Click Anywhere to start!</b></p>
+        <div class="targetstart tstyle">
+        </div> 
+        <p class="signature">Greg Goodrem - Milestone Project 2</p>
         </div>
     </div>
     <div id="scorescreen" class="popupScreen hiddenscore">
@@ -72,20 +87,6 @@
             <button id="replay">
                 <span>Replay</span>
             </button>
-        </div>
-    </div>
-    <div id="prestart" class="popupScreen visible">
-        <div>
-            <span class="headerfront">
-                <h1>Carnival Shooting Gallery</h1>
-            </span>
-            <h3>Instructions to play</h3>
-            <p>Simply hit the targets and make them drop as quickly as you can.</p>
-
-        <p>Click Anywhere to start!</p>
-        <div class="targetstart">
-        </div> 
-        <p class="signature">Greg Goodrem - Milestone Project 2</p>
         </div>
     </div>
     <script src="assets/js/script.js"></script>

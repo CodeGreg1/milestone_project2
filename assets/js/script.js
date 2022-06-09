@@ -11,13 +11,14 @@ var positionNum = 5;
 const target2 = document.getElementById('targettwo')
 const target1 = document.getElementById('targetone')
 const target3 = document.getElementById('targetthree')
+const centers = document.querySelectorAll('.centertarget')
 
 target1.addEventListener('click',()=> {
-    positionNum = 298})
+    positionNum = 268})
 target2.addEventListener('click',()=> {
-    positionNum = 318})
+    positionNum = 288})
 target3.addEventListener('click',()=> {
-    positionNum = 338})
+    positionNum = 308})
 
 //These are my target event listeners for each row they will all create a gun sound, increment the total score and reset the position of the target that has dropped
 //
@@ -30,6 +31,15 @@ targets.forEach((target)=>{
     	setTimeout(newPosition, 100)})
     })
 
+// Perfect score increase
+
+centers.forEach((center)=>{
+    center.addEventListener('click',()=> {
+        incrementScore()
+        incrementPerfectScore()})
+    })
+
+//
 function newPosition(){
     const activeTarget = document.querySelector('.target.active')
         activeTarget.style.left = `${(Math.floor(Math.random() * positionNum) + 1)}px`;
@@ -37,28 +47,22 @@ function newPosition(){
     }
 
 //This function creates the gunshot sound and plays even if another shot has been made as it pauses then restarts each time
-// function gunSound() {
-	
-//     if (gunShot.paused){
-//         gunShot.play()
-//     }else{
-//         gunShot.currentTime = 0
-//         }
-//     }
+
 const gunShot = document.getElementById('gun')
-const container = document.querySelector('.container');
+const container = document.querySelector('.container')
 container.addEventListener('click', e => {
     gunShot.currentTime = 0
     gunShot.play()}
-
-);
-    // gunShot.pause()
-	// gunShot.currentTime=0;
-	// gunShot.play()
-    // console.log('gun shot ran')
-    // }
+)
 
 //This function increments the score which is linked with the event listeners for the clicking of targets.
+function incrementPerfectScore(){
+    let oldScore = parseInt(document.getElementById("perfectScore").innerText);
+    document.getElementById("perfectScore").innerText = ++oldScore;}
+
+
+// Perfect score
+
 function incrementScore(){
     let oldScore = parseInt(document.getElementById("score").innerText);
     document.getElementById("score").innerText = ++oldScore;}
