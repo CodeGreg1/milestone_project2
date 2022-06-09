@@ -1,5 +1,6 @@
 const numbers = document.getElementById('numbers')
 const finalScore = document.getElementById('score')
+const perfectScore = document.getElementById('perfectScore')
 const scoreScreen = document.getElementById('scorescreen')
 const prestart = document.getElementById('prestart')
 const gameScore = document.getElementById('gameScore')
@@ -16,9 +17,12 @@ const centers = document.querySelectorAll('.centertarget')
 target1.addEventListener('click',()=> {
     positionNum = 268})
 target2.addEventListener('click',()=> {
-    positionNum = 288})
+    positionNum = 288
+    incrementScore()})
 target3.addEventListener('click',()=> {
-    positionNum = 308})
+    positionNum = 308
+    incrementScore()
+    incrementScore()})
 
 //These are my target event listeners for each row they will all create a gun sound, increment the total score and reset the position of the target that has dropped
 //
@@ -123,6 +127,7 @@ function runAnimation() {
 
 replay.addEventListener('click', () => {
     finalScore.innerText = '0'
+    perfectScore.innerText = '0'
     scoreScreen.classList.add('hiddenscore')
     scoreScreen.classList.remove('visible')
     resetDOM()
