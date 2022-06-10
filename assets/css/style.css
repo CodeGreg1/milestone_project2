@@ -189,22 +189,27 @@ h2.hit {
     transition: all 0.1s ease-in-out;
 }
 h2#score {
-    margin: 20px 0 10px;
-    left: 10px;
+    margin: 20px 0 15px;
+    position: relative;
+    left: -80px;
+    text-shadow:  2px 2px 2px maroon;
 }
 h2#perfectScore {
     margin: 20px 0 10px;
     position: relative;
-    left: -90px;
+    left: -35px;
+    font-size: 55px;
+}
+p.perfect {
+    font-size: 18px;
+    font-family: 'Sancreek', cursive;
+    margin: 0px;
+    position: relative;
+    left: -110px;
+    top: 97px;
 }
 h3 {
     font-size: 30px;
-    text-shadow: 2px 2px 2px #CE5937;
-}
-#score #perfectScore {
-    height: 100px;
-    width: 100px;
-    text-align: center;
     text-shadow: 2px 2px 2px #CE5937;
 }
 h4 {
@@ -214,13 +219,12 @@ h4 {
     text-transform: uppercase;
     top: 90px;
     position: absolute;
-    right:35px;
+    right:5px;
 }
 #flexbox {
     top: 50px;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
 }
 .counter {
     position: fixed;
@@ -267,7 +271,7 @@ h4 {
     width: 250px;
     height: 50px;
     top: 40px;
-    right: -50px;
+    right: -80px;
 } 
 .nums span {
     position: absolute;

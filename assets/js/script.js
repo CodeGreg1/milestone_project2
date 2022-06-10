@@ -13,6 +13,7 @@ const target2 = document.getElementById('targettwo')
 const target1 = document.getElementById('targetone')
 const target3 = document.getElementById('targetthree')
 const centers = document.querySelectorAll('.centertarget')
+const perfect = document.querySelector('.perfect')
 
 target1.addEventListener('click',()=> {
     positionNum = 268})
@@ -90,6 +91,8 @@ function stopScore () {
     finalScore.innerText = `${parseInt(finalScore.innerText)} Top Score!`
     scoreScreen.classList.remove('hiddenscore')
     scoreScreen.classList.add('visible')
+    perfectScore.classList.add('hiddenscore')
+    perfect.classList.add('hiddenscore')
     gameScore.innerText = finalScore.innerText
     numbers.classList.remove('out')
     console.log('finished stopscore')
@@ -130,6 +133,8 @@ replay.addEventListener('click', () => {
     perfectScore.innerText = '0'
     scoreScreen.classList.add('hiddenscore')
     scoreScreen.classList.remove('visible')
+    perfectScore.classList.remove('hiddenscore')
+    perfect.classList.remove('hiddenscore')
     resetDOM()
     runGame()  
 })
