@@ -192,23 +192,27 @@ h2.hit {
 h2#score {
     margin: 20px 0 15px;
     position: relative;
-    left: -80px;
+    left: -100px;
     text-shadow:  2px 2px 2px maroon;
+    width: 120px;
 }
 h2#perfectScore {
     margin: 20px 0 10px;
     position: relative;
-    left: -35px;
+    left: 0px;
     font-size: 55px;
     color: #f00;
+    width: 60px;
 }
 p.perfect {
     font-size: 18px;
+    height: 20px;
     font-family: 'Sancreek', cursive;
     margin: 0px;
     position: relative;
-    left: -110px;
+    left: -70px;
     top: 97px;
+    z-index: 3;
 }
 h3 {
     font-size: 30px;
@@ -221,15 +225,16 @@ h4 {
     text-transform: uppercase;
     top: 90px;
     position: absolute;
-    left: 170px;
+    left: 220px;
 }
 #flexbox {
     top: 50px;
     display: flex;
     flex-direction: row;
+    margin: 0;
 }
 .counter {
-    position: fixed;
+    position: absolute;
     text-align: center;
     height: 140px;
 }
@@ -273,7 +278,7 @@ h4 {
     width: 250px;
     height: 50px;
     top: 35px;
-    left: 90px;
+    left: 150px;
 } 
 .nums span {
     position: absolute;
