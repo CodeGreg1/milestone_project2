@@ -11,10 +11,11 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 90vh;
+    margin: 0 ;
     overflow: hidden;
-    margin: 0;
     cursor: pointer;
+
 }
 span {
     text-shadow: 2px 2px 2px #CE5937;
@@ -199,6 +200,7 @@ h2#perfectScore {
     position: relative;
     left: -35px;
     font-size: 55px;
+    color: #f00;
 }
 p.perfect {
     font-size: 18px;
@@ -219,7 +221,7 @@ h4 {
     text-transform: uppercase;
     top: 90px;
     position: absolute;
-    right:5px;
+    left: 170px;
 }
 #flexbox {
     top: 50px;
@@ -266,12 +268,12 @@ h4 {
 .nums {
     color: #ff0000;
     font-size: 50px;
-    position: relative;
+    position: absolute;
     overflow: hidden;
     width: 250px;
     height: 50px;
-    top: 40px;
-    right: -80px;
+    top: 35px;
+    left: 90px;
 } 
 .nums span {
     position: absolute;
