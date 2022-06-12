@@ -18,9 +18,9 @@ const perfect = document.querySelector('.perfect')
 var sound = "/gunshort.mp3"
 
 var howl = new Howl({
-  src: [sound],
-  autoplay: true
-});
+    src: [sound],
+    autoplay: true
+    });
 
 target1.addEventListener('click',()=> {
     positionNum = 268})
@@ -39,6 +39,7 @@ const targets = document.querySelectorAll('.target')
 targets.forEach((target)=>{
     target.addEventListener('click',()=> {
         target.classList.toggle('active')
+        howl.currentTime = 0
         howl.play()
         incrementScore()
     	setTimeout(newPosition, 100)})
