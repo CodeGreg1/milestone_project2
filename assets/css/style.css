@@ -20,7 +20,9 @@ body {
 span {
     text-shadow: 2px 2px 2px #CE5937;
 }
-
+b {
+    text-shadow: 2px 2px 2px #fff;
+}
 /* Styling for both initial screen and the score screen */
 .popupScreen {
     width: 100vw;
@@ -330,7 +332,7 @@ h4 {
     color: red;
     text-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
-#replay {
+button {
     background-color: #3498db;
     border-radius: 3px;
     border: none;
@@ -340,25 +342,13 @@ h4 {
     display: inline-block;
     cursor: pointer;
     margin: 10px;
+    padding: 10px;
 } 
 #replay span{
     cursor: pointer;
     display: inline-block;
     position: relative;
 } 
-#replay span:after{
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-} 
-#replay:hover span{
-    padding-right: 25px;
-}
-#replay:hover span:after{
-    opacity: 0;
-    right: 0;
-}
 
 /*---Bullet hole fire--*/
 .container .circle {

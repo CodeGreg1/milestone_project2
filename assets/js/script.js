@@ -14,13 +14,9 @@ const target1 = document.getElementById('targetone')
 const target3 = document.getElementById('targetthree')
 const centers = document.querySelectorAll('.centertarget')
 const perfect = document.querySelector('.perfect')
+const perfectPercentage = document.querySelector('.perfectPercentage')
 
-var sound = "/gunshort.mp3"
-
-var howl = new Howl({
-    src: [sound],
-    autoplay: true
-    });
+prestart.addEventListener('click',runGame)
 
 target1.addEventListener('click',()=> {
     positionNum = 268})
@@ -32,99 +28,83 @@ target3.addEventListener('click',()=> {
     incrementScore()
     incrementScore()})
 
+var sound = "/gunshort.mp3"
+var howl = new Howl({
+    src: [sound],
+    autoplay: true
+})  
+
 //These are my target event listeners for each row they will all create a gun sound, increment the total score and reset the position of the target that has dropped
-//
 const targets = document.querySelectorAll('.target')
 
 targets.forEach((target)=>{
     target.addEventListener('click',()=> {
         target.classList.toggle('active')
-        howl.currentTime = 0
         howl.play()
         incrementScore()
     	setTimeout(newPosition, 100)})
     })
 
 // Perfect score increase
-
 centers.forEach((center)=>{
     center.addEventListener('click',()=> {
         incrementScore()
         incrementPerfectScore()})
     })
 
-//
+// Function creates a new position for the targets dependant on which one is chosen dictates the distance from the left border it will be using the positionNum variable
 function newPosition(){
     const activeTarget = document.querySelector('.target.active')
         activeTarget.style.left = `${(Math.floor(Math.random() * positionNum) + 1)}px`;
-        activeTarget.classList.toggle('active')
-    }
+        activeTarget.classList.toggle('active')}
 
-//This function creates the gunshot sound and plays even if another shot has been made as it pauses then restarts each time
-
-// const gunShot = document.getElementById('gun')
-// const container = document.querySelector('.container')
-// container.addEventListener('click', e => {
-//     gunShot.currentTime = 0
-//     gunShot.play()}
-// )
-
-//This function increments the score which is linked with the event listeners for the clicking of targets.
+// Function increments the score which is linked with the event listeners for the clicking of targets.
 function incrementPerfectScore(){
     let oldScore = parseInt(document.getElementById("perfectScore").innerText);
     document.getElementById("perfectScore").innerText = ++oldScore;}
 
-
-// Perfect score
-
+// Function for Perfect score tally throughout the current game 
 function incrementScore(){
     let oldScore = parseInt(document.getElementById("score").innerText);
     document.getElementById("score").innerText = ++oldScore;}
 
-//This function runs the game by initiating the count down sequence 
+// Function runs the game by initiating the count down sequence 
 function runGame() {
-    console.log('start rungame')
+    resetDOM()
     startScore()
     const h4 = document.querySelector('h4')
+    finalScore.style.fontSize = '65px'
     runAnimation()
     h4.innerText = 'SHOOT!!!'
     numbers.classList.add('in')
     numbers.classList.remove('in')
     numbers.classList.add('out')
-    console.log('finished rungame')
     }
 
 //This function puts the end score in the h2 identifying a top score however I believe it runs beyond required so need to understand this bug
 function stopScore () {
-    console.log('started stopscore')
     finalScore.innerText = `${parseInt(finalScore.innerText)} Top Score!`
     scoreScreen.classList.remove('hiddenscore')
     scoreScreen.classList.add('visible')
     perfectScore.classList.add('hiddenscore')
     perfect.classList.add('hiddenscore')
     gameScore.innerText = finalScore.innerText
+    finalScore.style.fontSize = '35px'
+    perfectPercentage.textContent = `${perfectScore.innerText} %`
     numbers.classList.remove('out')
-    console.log('finished stopscore')
-    }
+}
 
-function startGame(){
-    prestart.addEventListener('click',runGame)
-    }
-
-//Count down functions
-
+// Function will reset the DOM so that the game can be replayed 
 function resetDOM () {
-    console.log('started resetdom')
     counter.classList.remove('hide')
     counter.classList.add('show')
     nums.forEach((num) => {
         num.classList.value = ''})
     nums[0].classList.add('in')
-    console.log('finished resetDom')
 }
 
+// Function runs the animations for the count down from 20 to zero.
 function runAnimation() {
-    console.log('started runanimation')
     nums.forEach((num,idx) => {
         const nextToLast = nums.length - 1
         num.addEventListener('animationend', (e) => {
@@ -134,8 +114,7 @@ function runAnimation() {
             } else if (e.animationName === 'goOut' && num.nextElementSibling) {
                 num.nextElementSibling.classList.add('in')
             } else {
-                counter.classList.add('hide')}})})
-                console.log('finished runanimation')}
+                counter.classList.add('hide')}})})}
 
 replay.addEventListener('click', () => {
     finalScore.innerText = '0'
@@ -144,37 +123,40 @@ replay.addEventListener('click', () => {
     scoreScreen.classList.remove('visible')
     perfectScore.classList.remove('hiddenscore')
     perfect.classList.remove('hiddenscore')
-    resetDOM()
     runGame()  
 })
 
+// The Event listener is operated from the score screen 
+const instructionStart = document.getElementById('instructionStart')
+instructionStart.addEventListener('click', () => {
+    finalScore.innerText = '0'
+    perfectScore.innerText = '0'
+    scoreScreen.classList.add('hiddenscore')
+    scoreScreen.classList.remove('visible')
+    perfectScore.classList.remove('hiddenscore')
+    perfect.classList.remove('hiddenscore')
+    prestart.classList.remove('hiddenscore')
+    prestart.classList.add('visible')
+})
+
+// Function will start the timer for the game to then stop the game after the setTimeOut
 function startScore (){
-    console.log('started startscore')
     prestart.classList.add('hiddenscore')
     prestart.classList.remove('visible')
     setTimeout(stopScore, 20000)
-    console.log('finished startscore')
-    }
+}
 
-    const buttons = document.querySelectorAll('.ripple')
-
-    buttons.forEach(button => {
-        button.addEventListener('click', function (e) {
-            
-            const targetOffset = parseInt(4)
-            const x = e.clientX - targetOffset
-            const y = e.clientY - targetOffset
-    
-            const circle = document.createElement('span')
-            circle.classList.add('circle')
-            circle.style.top = y + 'px'
-            circle.style.left = x + 'px'
-    
-            this.appendChild(circle)
-            console.log(x,y)
-            setTimeout(() => circle.remove(), 200)
-        })
- })
-
-//Running functions at the beginning of the page load
-startGame()
+const buttons = document.querySelectorAll('.ripple')
+buttons.forEach(button => {
+    button.addEventListener('click', function (e) {
+    const targetOffset = parseInt(4)
+    const x = e.clientX - targetOffset
+    const y = e.clientY - targetOffset
+    const circle = document.createElement('span')
+    circle.classList.add('circle')
+    circle.style.top = y + 'px'
+    circle.style.left = x + 'px'
+    this.appendChild(circle)
+    console.log(x,y)
+    setTimeout(() => circle.remove(), 200)
+})})
