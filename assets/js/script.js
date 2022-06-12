@@ -15,6 +15,13 @@ const target3 = document.getElementById('targetthree')
 const centers = document.querySelectorAll('.centertarget')
 const perfect = document.querySelector('.perfect')
 
+var sound = "/gunshort.mp3"
+
+var howl = new Howl({
+  src: [sound],
+  autoplay: true
+});
+
 target1.addEventListener('click',()=> {
     positionNum = 268})
 target2.addEventListener('click',()=> {
@@ -32,6 +39,7 @@ const targets = document.querySelectorAll('.target')
 targets.forEach((target)=>{
     target.addEventListener('click',()=> {
         target.classList.toggle('active')
+        howl.play()
         incrementScore()
     	setTimeout(newPosition, 100)})
     })
@@ -53,12 +61,12 @@ function newPosition(){
 
 //This function creates the gunshot sound and plays even if another shot has been made as it pauses then restarts each time
 
-const gunShot = document.getElementById('gun')
-const container = document.querySelector('.container')
-container.addEventListener('click', e => {
-    gunShot.currentTime = 0
-    gunShot.play()}
-)
+// const gunShot = document.getElementById('gun')
+// const container = document.querySelector('.container')
+// container.addEventListener('click', e => {
+//     gunShot.currentTime = 0
+//     gunShot.play()}
+// )
 
 //This function increments the score which is linked with the event listeners for the clicking of targets.
 function incrementPerfectScore(){
@@ -166,7 +174,6 @@ function startScore (){
             setTimeout(() => circle.remove(), 200)
         })
  })
-
 
 //Running functions at the beginning of the page load
 startGame()
