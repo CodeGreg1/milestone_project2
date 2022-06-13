@@ -18,7 +18,7 @@ const perfectTallyId = document.querySelector('#perfectTally')
 const targetTallyId = document.querySelector('#targetTally')
 var positionNum = 5;
 let perfectTally = 0
-var shotTally = 0
+let shotTally = 0
 let targetTally = 0
 
 prestart.addEventListener('click',runGame)
@@ -33,7 +33,7 @@ target3.addEventListener('click',()=> {
     incrementScore()
     incrementScore()})
 
-var sound = "/gunshort.mp3"
+var sound = "https://codegreg1.github.io/milestone_project2/gunshort.mp3"
 var howl = new Howl({
     src: [sound],
     autoplay: true
@@ -77,6 +77,9 @@ function incrementScore(){
 
 // Function runs the game by initiating the count down sequence 
 function runGame() {
+    perfectTally = 0
+    shotTally = 0
+    targetTally = 0
     resetDOM()
     startScore()
     const h4 = document.querySelector('h4')
