@@ -29,8 +29,7 @@ b {
     height: 100vh;
     max-width: 500px;
     max-height: 700px;
-    background-color: #edd7bd;
-    border: 10px solid #D45A4d;
+    background-color: #fff;
     border-radius: 5%;
     display: flex;
     position: absolute;
@@ -376,4 +375,8 @@ span.circle {
         transform: translate(-50%, -50%) scale(0);
         opacity: 0.5;
     }
+}
+
+.scores {
+    color: rgb(30, 30, 30);
 }

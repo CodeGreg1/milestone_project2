@@ -8,13 +8,18 @@ const gameScore = document.getElementById('gameScore')
 const nums = document.querySelectorAll('.nums span')
 const counter = document.querySelector('.counter')
 const replay = document.querySelector('#replay')
-var positionNum = 5;
-const target2 = document.getElementById('targettwo')
 const target1 = document.getElementById('targetone')
+const target2 = document.getElementById('targettwo')
 const target3 = document.getElementById('targetthree')
 const centers = document.querySelectorAll('.centertarget')
 const perfect = document.querySelector('.perfect')
-const perfectPercentage = document.querySelector('.perfectPercentage')
+const shotTallyId = document.querySelector('#shotTally')
+const perfectTallyId = document.querySelector('#perfectTally')
+const targetTallyId = document.querySelector('#targetTally')
+var positionNum = 5;
+let perfectTally = 0
+var shotTally = 0
+let targetTally = 0
 
 prestart.addEventListener('click',runGame)
 
@@ -42,6 +47,7 @@ targets.forEach((target)=>{
         target.classList.toggle('active')
         howl.play()
         incrementScore()
+        targetTally++
     	setTimeout(newPosition, 100)})
     })
 
@@ -49,6 +55,7 @@ targets.forEach((target)=>{
 centers.forEach((center)=>{
     center.addEventListener('click',()=> {
         incrementScore()
+        perfectTally++
         incrementPerfectScore()})
     })
 
@@ -90,8 +97,8 @@ function stopScore () {
     perfect.classList.add('hiddenscore')
     gameScore.innerText = finalScore.innerText
     finalScore.style.fontSize = '35px'
-    perfectPercentage.textContent = `${perfectScore.innerText} %`
     numbers.classList.remove('out')
+    allScores()
 }
 
 // Function will reset the DOM so that the game can be replayed 
@@ -145,7 +152,6 @@ function startScore (){
     prestart.classList.remove('visible')
     setTimeout(stopScore, 20000)
 }
-
 const buttons = document.querySelectorAll('.ripple')
 buttons.forEach(button => {
     button.addEventListener('click', function (e) {
@@ -158,5 +164,13 @@ buttons.forEach(button => {
     circle.style.left = x + 'px'
     this.appendChild(circle)
     console.log(x,y)
+    shotTally++
     setTimeout(() => circle.remove(), 200)
 })})
+shotTallyId.textContent = shotTally
+
+function allScores (){ 
+        shotTallyId.innerHTML = `${shotTally} Shots Taken`
+        targetTallyId.innerHTML = `${targetTally} Targets Hit`
+        perfectTallyId.innerHTML = `${Math.floor(perfectTally/shotTally*100)}% Perfect Shots`
+}
