@@ -21,14 +21,14 @@ span {
     text-shadow: 2px 2px 2px #CE5937;
 }
 b {
-    text-shadow: 2px 2px 2px #fff;
+    text-shadow: 2px 2px 2px rgb(111, 111, 111);
 }
 /* Styling for both initial screen and the score screen */
 .popupScreen {
     width: 100vw;
     height: 100vh;
     max-width: 500px;
-    max-height: 700px;
+    max-height: 650px;
     background-color: #fff;
     border-radius: 5%;
     display: flex;
