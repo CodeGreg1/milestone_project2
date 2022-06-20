@@ -1,0 +1,23 @@
+{
+  "name": "milestone_project2",
+  "version": "1.0.0",
+  "description": "Milestone project 2 Javascript game - Carnival Shooting Gallery",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeGreg1/milestone_project2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodeGreg1/milestone_project2/issues"
+  },
+  "homepage": "https://github.com/CodeGreg1/milestone_project2#readme",
+  "devDependencies": {
+    "jest": "^28.1.1"
+  }
+}

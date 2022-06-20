@@ -333,7 +333,7 @@ h4 {
     text-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
 button {
-    background-color: #3498db;
+    background-color: rgb(0, 17, 255);
     border-radius: 3px;
     border: none;
     color: aliceblue;
@@ -380,4 +380,8 @@ span.circle {
 
 .scores {
     color: rgb(30, 30, 30);
+}
+
+main {
+    display: contents;
 }

@@ -12,32 +12,31 @@ The live website can be found here.
 
 <h2 align="center"><img src="assets/media/mock-up.png"></h2>
 
-## User Experience (UX)
+## User Experience (UX and UI)
 
 -   ### User stories
 
     -   #### First Time Visitor Goals
 
-        1. As a first time user I need them to understand how to get the game started and the general rules of the game. 
+        - As a first time user I need them to understand how to get the game started and the general rules of the game. 
         
-        2. As a first time user I need them to understand how to shoot a target to take them down.
+        - As a first time user I need them to understand how to shoot a target to take them down.
 
-        3. As a first time user I need them to easily play the game through responsive design of the shooting gallery.
+        - As a first time user I need them to easily play the game through responsive design of the shooting gallery.
 
-        4. As a first time user I need them to realise how the scoring works so they can beat their previous score next time they play. 
+        - As a first time user I need them to realise how the scoring works so they can beat their previous score next time they play. 
 
     -   #### Returning Visitor Goals
 
-        1. As a Returning Visitor, I want them to be competitive with themselves and try and get the best score possible. 
+        - As a Returning Visitor, I want them to be competitive with themselves and try and get the best score possible. 
 
-## UX and UI
 
 -   ###  Game Research  
     
     I wanted to explore a retro shooting style game which would be very unique. I loved playing games like this myself games such as Time-crisis back in the 1990's. I gathered more inspiration for this game from shoot'em ups and classic retro games like duck hunt, space invaders and asteroids.
     I played several of these types of games both online and through a retro gaming console to help develop an idea.
     
-    -   ### Research Analysis
+-   ### Research Analysis
     I thought although it would be great to write games such as space invaders or asteroids in a more code along type of learning for this project, I wanted to put my own spin on a shooting game.
     
     I hadn't seen a game like the one I designed on any of the retro sites or comsoles. 
@@ -46,51 +45,47 @@ The live website can be found here.
 
 
 -   ### Design
-
     The design is suppose to mimic a carnival stall where you would shoot at the targets and win a prize!
 
-    -   #### Colour Scheme
-        -   The two main colours used are Red, Black and White.
+    #### Colour Scheme
+    -   The two main colours used are Red, Black and White.
    
-    -   ### Typography
-        -   I've used two fonts in this game.
-        'Sancreek' has been used to give the text a more fun carnival feel although it's quite a complicated design so mainly used as titles and sub titles.
-        'Roboto' has also been used to give the instructions a clean and clear font which should make it easy to read.
+    #### Typography
+    -   I've used two fonts in this game.
+    'Sancreek' has been used to give the text a more fun carnival feel although it's quite a complicated design so mainly used as titles and sub titles.
+    'Roboto' has also been used to give the instructions a clean and clear font which should make it easy to read.
 
-        ### Imagery
-        -   Two pictures have been used I've created and edited both in canva.
-        The target design was made to show a realistic visual for a target with the rings showing a potential score. 
-        Later during my game development I thought I would keep the design however lose the scoring so it would be less complicated for the player only having to focus on the centre target and the outer white rings.
-        The carnival background header was created to give the game some sort of carnival feel.
+    #### Imagery
+    -   Two pictures have been used I've created and edited both in canva.
+    The target design was made to show a realistic visual for a target with the rings showing a potential score. 
+    Later during my game development I thought I would keep the design however lose the scoring so it would be less complicated for the player only having to focus on the centre target and the outer white rings.
+    The carnival background header was created to give the game some sort of carnival feel.
 
-        - #### Wireframes
-        -   Initial/Instruction Screen Wireframe - [View]()
-
-        -   Game Display Screen Wireframe - [View]()
-
-        -   Score Screen Wireframe - [View] ()
+    #### Wireframes
+    -   Initial/Instruction Screen Wireframe - [View]()
+    -   Game Display Screen Wireframe - [View]()
+    -   Score Screen Wireframe - [View] ()
 
 
-        ### Responsive Design Features
-
-        - Game Designed completely independently of tutorials or code along type projects.
-        - Game is designed as an interactive shooting gallery.
-        - Game is playable on all platforms although mobile will achieve a higher score due to more digits able to hit more targets.
-        - The game keeps score of the Total score, Perfect shots, also a shoots taken tally.
-        -   The game has an animated count down clock and also animated target when knocked down.
-        -   The game also resets the target within the different levels length as soon as the previous target disappears.
+    #### Responsive Design Features
+    - Game Designed completely independently of tutorials or code along type projects.
+    - Game is designed as an interactive shooting gallery.
+    - Game is playable on all platforms although mobile will achieve a higher score due to more digits able to hit more targets.
+    - The game keeps score of the Total score, Perfect shots, also a shoots taken tally.
+    - The game has an animated count down clock and also animated target when knocked down.
+    - The game also resets the target within the different levels length as soon as the previous target disappears.
         
-        ### Future Features
-        -   Once a website is established I could create a highscore section which also differenciates between mobile and desktop players.    
-        -   Different types of level themes.
-        -   Moving targets either left or right to make it more challenging.
+    ### Future Features
+    -   Once a website is established I could create a highscore section which also differenciates between mobile and desktop players.    
+    -   Different types of level themes.
+    -   Moving targets either left or right to make it more challenging.
 
-        ### Technologies used
-        -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
-        -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
-        -   [Javascript]()
+    ### Technologies used
+    -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
+    -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+    -   [Javascript]()
 
-    -   ### Frameworks, Libraries & Programs Used
+    ### Frameworks, Libraries & Programs Used
 
     [Google Fonts:](https://fonts.google.com/)
     - Google fonts were used to import the 'Roboto' font into the style.css file which is used on all pages throughout the project.
@@ -111,7 +106,7 @@ The live website can be found here.
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
--   [W3C Markup Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcodegreg1.github.io%2Fmilestone_project2%2F) - Results - No Errors or Warnings
--   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fcodegreg1.github.io%2Fmilestone_1_greg_goodrem%2Fassets%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) - Results No Errors
+- [W3C Markup Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcodegreg1.github.io%2Fmilestone_project2%2F) - Results - No Errors or Warnings
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fcodegreg1.github.io%2Fmilestone_1_greg_goodrem%2Fassets%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) - Results No Errors
 
 ### Testing User Stories from User Experience (UX) Section
