@@ -36,19 +36,19 @@ The live website can be found here.
     I wanted to explore a retro shooting style game which would be very unique. I loved playing games like this myself games such as Time-crisis back in the 1990's. I gathered more inspiration for this game from shoot'em ups and classic retro games like duck hunt, space invaders and asteroids.
     I played several of these types of games both online and through a retro gaming console to help develop an idea.
     
--   ### Research Analysis
-    I thought although it would be great to write games such as space invaders or asteroids in a more code along type of learning for this project, I wanted to put my own spin on a shooting game.
+    -   ### Research Analysis
+        I thought although it would be great to write games such as space invaders or asteroids in a more code along type of learning for this project, I wanted to put my own spin on a shooting game.
     
-    I hadn't seen a game like the one I designed on any of the retro sites or comsoles. 
-    I thought to keep it child friendly I would use a carnival shooting style instead of a more military style shooting experience with enemy targets.
-    Although this idea could develop into more development of the game.
+        I hadn't seen a game like the one I designed on any of the retro sites or comsoles. 
+        I thought to keep it child friendly I would use a carnival shooting style instead of a more military style shooting experience with enemy targets.
+        Although this idea could develop into more development of the game.
 
 
 -   ### Design
     The design is suppose to mimic a carnival stall where you would shoot at the targets and win a prize!
 
     #### Colour Scheme
-    -   The two main colours used are Red, Black and White.
+    -   The two main colours used are Red, Black and White as I feel these fit with the general aesthetics of the theme.
    
     #### Typography
     -   I've used two fonts in this game.
@@ -62,9 +62,9 @@ The live website can be found here.
     The carnival background header was created to give the game some sort of carnival feel.
 
     #### Wireframes
-    -   Initial/Instruction Screen Wireframe - [View]()
-    -   Game Display Screen Wireframe - [View]()
-    -   Score Screen Wireframe - [View] ()
+    -   Initial/Instruction Screen Wireframe - [View](https://codegreg1.github.io/milestone_project2/assets/media/projectWireframeInitialScreen.png)
+    -   Game Display Screen Wireframe - [View](https://codegreg1.github.io/milestone_project2/assets/media/projectWireframeGameScreen.png)
+    -   Score Screen Wireframe - [View](https://codegreg1.github.io/milestone_project2/assets/media/projectWireframeScoreScreen.png)
 
 
     #### Responsive Design Features
@@ -83,24 +83,24 @@ The live website can be found here.
     ### Technologies used
     -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
     -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
-    -   [Javascript]()
+    -   [Javascript](https://en.wikipedia.org/wiki/javascript)
 
     ### Frameworks, Libraries & Programs Used
 
-    [Google Fonts:](https://fonts.google.com/)
-    - Google fonts were used to import the 'Roboto' font into the style.css file which is used on all pages throughout the project.
-    [Font Awesome:](https://fontawesome.com/)
-    - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
-    [Git](https://git-scm.com/)
-    - Git was used for version control by utilizing the VS Code terminal to commit to Git and Push to GitHub.
-    [Visual Studio Code](https://code.visualstudio.com)
-    - I used VS Code as I have found it quite easy to use and also enables me to automatically have a hard copy of each file on my laptop
-    [GitHub:](https://github.com/)
-    - GitHub is used to store the projects code after being pushed from Git.
-    [Balsamiq:](https://balsamiq.com/)
-    - Balsamiq was used to create the [wireframes](https://github.com/) during the design process.
-    [Howler](https://howlerjs.com)
-
+    - [Google Fonts:](https://fonts.google.com/)
+        - Google fonts were used to import the 'Roboto' font into the style.css file which is used on all pages throughout the project.
+    - [Font Awesome:](https://fontawesome.com/)
+        - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
+    - [Git](https://git-scm.com/)
+        - Git was used for version control by utilizing the VS Code terminal to commit to Git and Push to GitHub.
+    - [Visual Studio Code](https://code.visualstudio.com)
+        - I used VS Code as I have found it quite easy to use and also enables me to automatically have a hard copy of each file on my laptop
+    - [GitHub:](https://github.com/)
+        - GitHub is used to store the projects code after being pushed from Git.
+    - [Balsamiq:](https://balsamiq.com/)
+        - Balsamiq was used to create the wireframes during the design process.
+    - [Howler](https://howlerjs.com)
+        - I used Howler to correct the issue I had with the sound effects not playing correctly.
 
 ## Testing
 
@@ -108,5 +108,19 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 - [W3C Markup Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcodegreg1.github.io%2Fmilestone_project2%2F) - Results - No Errors or Warnings
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fcodegreg1.github.io%2Fmilestone_1_greg_goodrem%2Fassets%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) - Results No Errors
+- [Lighthouse Report Mobile](https://codegreg1.github.io/milestone_project2/codegreg1.github.io_2022-06-20_10-37-19.html)
+- [Lighthouse Report Desktop](https://codegreg1.github.io/milestone_project2/codegreg1.github.io_2022-06-20_10-39-51.html)
+- [Wave Report](https://wave.webaim.org/report#/https://codegreg1.github.io/milestone_project2/)
 
-### Testing User Stories from User Experience (UX) Section
+
+## Errors and Bugs
+The biggest area of resistance with the project was trying to get the sound to work in the way intended. I was able to over come this issue with the use of Howler which allowed me to deploy a better user experience with the sound playing on all devices without delays. The problem was initially due to the way Safari among other browsers doesn't allow you to play sounds on a website straight away and requires some sort of interaction with the page first.
+
+Another bug I have is if the user decides to zoom in on the page and try and hit targets closer this actually distorts the placement of the bullet hole effect. One way in the future to address this is to make the shooting gallery change to the size of the viewing area.
+
+## Journey
+I feel I have made some big leaps in programming as the project initially started out as it looks below. I was figuring out how to move the targets from one place to another with animation to the final project with a much better agame feel to it.
+<img src="assets/media/initialLayout.jpg">
+#### Above is where I started
+#### Below is where it led before I got to my final design
+<img src="assets/media/secondPhase.jpg">
