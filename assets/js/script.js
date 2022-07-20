@@ -11,12 +11,14 @@ const REPLAY = document.querySelector('#replay')
 const TARGET_1 = document.getElementById('targetone')
 const TARGET_2 = document.getElementById('targettwo')
 const TARGET_3 = document.getElementById('targetthree')
+const MISSED = document.querySelector('.container')
 const CENTERS = document.querySelectorAll('.centertarget')
 const PERFECT = document.querySelector('.perfect')
-const SHOT_TALLY_ID = document.querySelector('#shotTally')
+const SHOT_TALLY_ID = document.querySelector('#shotTallyID')
+const SHOT_TALLY_CURRENT = document.querySelector('#shotTallyCurrent')
 const PERFECT_TALLY_ID = document.querySelector('#perfectTally')
 const TARGET_TALLY_ID = document.querySelector('#targetTally')
-const BUTTONS = document.querySelectorAll('.ripple')
+const BULLET_HOLES = document.querySelectorAll('.ripple')
 const INSTRUCTION_START = document.getElementById('instructionStart')
 
 var positionNum = 5;
@@ -36,11 +38,18 @@ TARGET_3.addEventListener('click',()=> {
     incrementScore()
     incrementScore()})
 
-var sound = "https://codegreg1.github.io/milestone_project2/gunshort.mp3"
-var howl = new Howl({
-    src: [sound],
+var sfx = {
+    shot: new Howl({
+    src: ["https://codegreg1.github.io/milestone_project2/gunshort.mp3"],
     autoplay: true
-})  
+}),
+    miss: new Howl({
+    src: ["https://codegreg1.github.io/milestone_project2/ricochet.mp3"],
+    autoplay:true
+})
+}
+
+
 
 //These are my target event listeners for each row they will all create a gun sound, increment the total score and reset the position of the target that has dropped
 const TARGETS = document.querySelectorAll('.target')
@@ -48,7 +57,7 @@ const TARGETS = document.querySelectorAll('.target')
 TARGETS.forEach((target)=>{
     target.addEventListener('click',()=> {
         target.classList.toggle('active')
-        howl.play()
+        sfx.shot.play()
         incrementScore()
         targetTally++
     	setTimeout(newPosition, 100)})
@@ -61,6 +70,12 @@ CENTERS.forEach((center)=>{
         perfectTally++
         incrementPerfectScore()})
     })
+
+// MISSED.addEventListener('click', ()=> {
+//     if (TARGET_1.classList = 'active'){
+//         sfx.miss.play()
+//     }
+// })
 
 // Function creates a new position for the targets dependant on which one is chosen dictates the distance from the left border it will be using the positionNum variable
 function newPosition(){
@@ -132,6 +147,7 @@ function runAnimation() {
 REPLAY.addEventListener('click', () => {
     FINAL_SCORE.innerText = '0'
     PERFECT_SCORE.innerText = '0'
+    SHOT_TALLY_CURRENT.innerText = '0'
     SCORE_SCREEN.classList.add('hiddenscore')
     SCORE_SCREEN.classList.remove('visible')
     PERFECT_SCORE.classList.remove('hiddenscore')
@@ -157,8 +173,8 @@ function startScore (){
     PRESTART.classList.remove('visible')
     setTimeout(stopScore, 20000)
 }
-BUTTONS.forEach(button => {
-    button.addEventListener('click', function (e) {
+BULLET_HOLES.forEach(hole => {
+    hole.addEventListener('click', function (e) {
     const TARGET_OFFSET = parseInt(4)
     const X = e.clientX - TARGET_OFFSET
     const Y = e.clientY - TARGET_OFFSET
@@ -169,13 +185,18 @@ BUTTONS.forEach(button => {
     this.appendChild(circle)
     console.log(X,Y)
     shotTally++
+    SHOT_TALLY_CURRENT.innerText = shotTally
     setTimeout(() => circle.remove(), 200)
 })})
-SHOT_TALLY_ID.textContent = shotTally
 
 function allScores (){ 
+        console.log('finalscore code run start')
         SHOT_TALLY_ID.innerHTML = `${shotTally} Shots Taken`
+        console.log('finalscore code run shots taken')
         TARGET_TALLY_ID.innerHTML = `${targetTally} Targets Hit`
-        PERFECT_TALLY_ID.innerHTML = `${ 
-            Math.floor(perfectTally/shotTally*100)}% Perfect Shots`
+        console.log('finalscore code run targettally')
+        let perfectPercentage = Math.floor(perfectTally/shotTally*100)
+        if(perfectPercentage === NaN){perfectPercentage = '0'}
+        PERFECT_TALLY_ID.innerHTML = `${perfectPercentage}% Perfect Shots`
+        console.log('finalscore code run perfect shots')
 }
