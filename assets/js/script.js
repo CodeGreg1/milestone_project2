@@ -21,7 +21,7 @@ const TARGET_TALLY_ID = document.querySelector('#targetTally')
 const BULLET_HOLES = document.querySelectorAll('.ripple')
 const INSTRUCTION_START = document.getElementById('instructionStart')
 
-var positionNum = 5;
+var positionNum = 5
 let perfectTally = 0
 let shotTally = 0
 let targetTally = 0
@@ -71,11 +71,11 @@ CENTERS.forEach((center)=>{
         incrementPerfectScore()})
     })
 
-// MISSED.addEventListener('click', ()=> {
-//     if (TARGET_1.classList = 'active'){
-//         sfx.miss.play()
-//     }
-// })
+MISSED.addEventListener('click', ()=> {
+         sfx.miss.play()
+         sfx.miss.volume(0.2)
+     
+})
 
 // Function creates a new position for the targets dependant on which one is chosen dictates the distance from the left border it will be using the positionNum variable
 function newPosition(){
@@ -190,13 +190,12 @@ BULLET_HOLES.forEach(hole => {
 })})
 
 function allScores (){ 
-        console.log('finalscore code run start')
-        SHOT_TALLY_ID.innerHTML = `${shotTally} Shots Taken`
-        console.log('finalscore code run shots taken')
-        TARGET_TALLY_ID.innerHTML = `${targetTally} Targets Hit`
-        console.log('finalscore code run targettally')
-        let perfectPercentage = Math.floor(perfectTally/shotTally*100)
-        if(perfectPercentage === NaN){perfectPercentage = '0'}
-        PERFECT_TALLY_ID.innerHTML = `${perfectPercentage}% Perfect Shots`
-        console.log('finalscore code run perfect shots')
+    SHOT_TALLY_ID.innerHTML = `${shotTally} Shots Taken`
+    if(shotTally === 0){
+        shotTally++
+    }
+    let perfectPercentage = Math.floor(perfectTally/shotTally*100)
+    TARGET_TALLY_ID.innerHTML = `${targetTally} Targets Hit`
+    PERFECT_TALLY_ID.innerHTML = `${perfectPercentage}% Perfect Shots`
+    console.log(typeof(perfectPercentage))
 }
