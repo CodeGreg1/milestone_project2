@@ -193,7 +193,7 @@ h2.hit {
 h2#score {
     margin: 20px 0 15px;
     position: relative;
-    left: -20px;
+    left: -30px;
     text-shadow:  2px 2px 2px maroon;
     width: 120px;
 }
