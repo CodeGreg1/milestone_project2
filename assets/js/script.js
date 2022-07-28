@@ -27,6 +27,9 @@ let perfectTally = 0
 let shotTally = 0
 let targetTally = 0
 
+/* These are the sound effects that I'm using in conjuction with Howler js which enables
+me to have 2 different types of sound effect 1 for firing and hitting a target and the 
+other for missing the target */
 var sfx = {
     shot: new Howl({
     src: ["https://codegreg1.github.io/milestone_project2/gunshort.mp3"],
@@ -37,6 +40,15 @@ var sfx = {
     autoplay:true
 })}
 
+/* The event listeners listed here are used for the starting, replaying of the main game
+and also the different effects on targets: 
+    Target1 being hit
+    Target2 being hit
+    Target3 being hit
+    Target missed
+    Center/Perfect hit is achieved on any level
+    and finally the bullet hole effect on missed targets
+*/
 PRESTART.addEventListener('click',runGame)
 
 REPLAY.addEventListener('click', replay)
@@ -47,35 +59,38 @@ MISSED.addEventListener('click', missedShot)
 
 TARGET_1.addEventListener('click',()=> {
     positionNum = 268
-    shotUpdate(1)})
+    incrementScore(1)
+    shotUpdate()}
+)
 TARGET_2.addEventListener('click',()=> {
     positionNum = 288
-    incrementScore()
-    shotUpdate(2)})
+    incrementScore(2)
+    shotUpdate()}
+)
 TARGET_3.addEventListener('click',()=> {
     positionNum = 308
-    shotUpdate(3)
-    incrementScore()
-    incrementScore()
-})
-
+    shotUpdate()
+    incrementScore(3)
+}
+)
 TARGETS.forEach((target)=>{
     target.addEventListener('click', function(e) {
         target.classList.toggle('active')
         sfx.shot.play()
-        incrementScore()
         targetTally++
         e.stopPropagation()
         console.log('Target clicked')
     	setTimeout(newPosition, 100)})
-})
+}
+)
 
 CENTERS.forEach((center)=>{
     center.addEventListener('click',()=> {
-        incrementScore()
+        incrementScore(1)
         perfectTally++
         incrementPerfectScore()})
-})
+}
+)
 
 BULLET_HOLES.forEach(hole => {
     hole.addEventListener('click', function (e) {
@@ -90,13 +105,17 @@ BULLET_HOLES.forEach(hole => {
     console.log(X,Y)
     shotUpdate()
     setTimeout(() => circle.remove(), 200)
-})})
-    
+})}
+)
+
+//This plays a ricochet sound everytime a shot is not hitting a target
 function missedShot(){
     sfx.miss.play()
     sfx.miss.volume(0.6)
 }
 
+//This works in conjunction with the target being hit and then reset into a new 
+//position along its horizontal axis depending on which level target has been struck 
 function newPosition(){
     let activeTarget = document.querySelector('.target.active')
     activeTarget.style.left = `${(Math.floor(Math.random() * positionNum) + 1)}px`;
@@ -108,10 +127,13 @@ function incrementPerfectScore(){
     document.getElementById("perfectScore").innerText = ++oldScore;
 }
 
-function incrementScore(){
+function incrementScore(x){
+    if (x === 1) {x = 1;
+    } else if (x === 2) {x = 2;
+    } else {x = 3;
+    }
     let oldScore = parseInt(document.getElementById("score").innerText)
-    document.getElementById("score").innerText = ++oldScore
-    
+    document.getElementById("score").innerText = oldScore + x
 }
 
 function runGame() {
