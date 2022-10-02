@@ -16,7 +16,7 @@ const MISSED = document.querySelector('.container')
 const CENTERS = document.querySelectorAll('.centertarget')
 const PERFECT = document.querySelector('.perfect')
 const SHOT_TALLY_ID = document.querySelector('#shotTallyID')
-const SHOT_TALLY_CURRENT = document.querySelector('#shotTallyCurrent')
+var SHOT_TALLY_CURRENT = document.querySelector('#shotTallyCurrent')
 const PERFECT_TALLY_ID = document.querySelector('#perfectTally')
 const TARGET_TALLY_ID = document.querySelector('#targetTally')
 const BULLET_HOLES = document.querySelectorAll('.ripple')
@@ -29,9 +29,9 @@ let targetTally = 0
 
 /* These are the sound effects that I'm using in conjuction with Howler js which enables
 me to have 2 different types of sound effect 1 for firing and hitting a target and the 
-other for missing the target */
+other for missing the target 
 
-/* var sfx = {
+var sfx = {
     shot: new Howl({
     src: ["https://codegreg1.github.io/milestone_project2/gunshort.mp3"],
     autoplay: true
@@ -72,8 +72,9 @@ TARGET_3.addEventListener('click',()=> {
     positionNum = 308
     shotUpdate()
     incrementScore(3)
-}
-)
+})
+
+
 These for loops are for when targets get tapped/clicked and a 
 firing sound is to be initiated. The stopPropagation makes sure it
 doesn't start the missed shot event listener. 
@@ -207,6 +208,7 @@ once the game has begun.
 */
 function shotUpdate(){
     shotTally++
+    SHOT_TALLY_CURRENT = Number
     SHOT_TALLY_CURRENT.innerText = shotTally
 }
 
@@ -255,4 +257,4 @@ function allScores (){
     PERFECT_TALLY_ID.innerHTML = `${perfectPercentage}% Perfect Shots`
 }
 
-module.exports = { incrementScore }
+module.exports = { incrementScore, shotUpdate }
