@@ -38,7 +38,7 @@ var sfx = {
     autoplay: true
 }),
     miss: new Howl({
-    src: ["https://codegreg1.github.io/milestone_project2/assets/media/ricochet.mp3"],
+    src: ["https://codegreg1.github.io/milestone_project2/assets/media/audio/ricochet.mp3"],
     autoplay: true
 })};
 
