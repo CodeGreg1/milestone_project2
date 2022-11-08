@@ -368,6 +368,8 @@ h4 {
     font-size: 40px;
     color: red;
     text-shadow: 2px 2px 2px rgb(0, 0, 0);
+    margin: 0px 0px;
+    font-weight: 500;
 }
 button {
     background-color: #940000;
