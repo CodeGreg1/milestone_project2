@@ -423,9 +423,7 @@ main {
     display: contents;
 }
 
-#sound {
-    font-size: 20px;
-    position: absolute;
-    right: 10px;
-    top: 10px;
+h2.instruction {
+    font-size: 30px;
+    text-shadow: 2px 2px 2px #CE5937;
 }

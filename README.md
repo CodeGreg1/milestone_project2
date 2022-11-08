@@ -110,17 +110,33 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fcodegreg1.github.io%2Fmilestone_1_greg_goodrem%2Fassets%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) - Results No Errors
 - [Lighthouse Report Mobile](https://codegreg1.github.io/milestone_project2/codegreg1.github.io_2022-06-20_10-37-19.html)
 - [Lighthouse Report Desktop](https://codegreg1.github.io/milestone_project2/codegreg1.github.io_2022-06-20_10-39-51.html)
-- [Wave Report](https://wave.webaim.org/report#/https://codegreg1.github.io/milestone_project2/)
+- [Wave Report](https://wave.webaim.org/report#/https://codegreg1.github.io/milestone_project2/) - There are alerts that relate to using
+
+Also I used Jest Testing for automated testing I ran into a couple of problems however I isolated the file and tested seperately. You'll find the isolated function file here:
+
+[Jest Testing Isolated Script Used](https://codegreg1.github.io/milestone_project2/assets/js/script2.js)
+
+Below is the link to the Testing Script which came out with a result of 
+
+[Jest Test Script](https://codegreg1.github.io/milestone_project2/assets/js/script.test.js)
+
 
 
 ## Errors and Bugs
 The biggest area of resistance with the project was trying to get the sound to work in the way intended. I was able to over come this issue with the use of Howler which allowed me to deploy a better user experience with the sound playing on all devices without delays. The problem was initially due to the way Safari among other browsers doesn't allow you to play sounds on a website straight away and requires some sort of interaction with the page first.
 
+
 Another bug I have is if the user decides to zoom in on the page and try and hit targets closer this actually distorts the placement of the bullet hole effect. One way in the future to address this is to make the shooting gallery change to the size of the viewing area.
 
 ## Journey
-I feel I have made some big leaps in programming as the project initially started out as it looks below. I was figuring out how to move the targets from one place to another with animation to the final project with a much better agame feel to it.
+I feel I have made some big leaps in programming as the project initially started out as it looks below. I was figuring out how to move the targets from one place to another with animation to the final project with a much better game feel to it.
+
+Below is where I started and experimented with javascript.
 <img src="assets/media/initialLayout.jpg">
-#### Above is where I started
-#### Below is where it led before I got to my final design
+
+Below is where it led before I got to my final design
 <img src="assets/media/secondPhase.jpg">
+
+Below is my final design with lots of additions and counters for that true game feel.
+<img src="assets/media/finalPhase.png">
+
