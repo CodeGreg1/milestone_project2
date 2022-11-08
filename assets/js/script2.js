@@ -1,3 +1,6 @@
+/* This Js document is purely for the usage of the Jest testing environment
+I've had to isolate functions so that I can test using Jest you'll see below
+I've just commented out conflicting code such as Howler  */
 //Elements related to the basic visual setup and interaction
 const NUMBERS = document.getElementById('numbers')
 const FINAL_SCORE = document.getElementById('score')

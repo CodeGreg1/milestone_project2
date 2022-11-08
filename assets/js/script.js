@@ -39,7 +39,7 @@ var sfx = {
 }),
     miss: new Howl({
     src: ["https://codegreg1.github.io/milestone_project2/ricochet.mp3"],
-    autoplay:true
+    autoplay: true
 })};
 
 /* The event listeners listed here are used for the starting, replaying of the main game
@@ -129,9 +129,9 @@ function newPosition(){
     activeTarget.classList.toggle('active');
 }
 
-/* Below are the two different incrementation of scores. The perfect score is very basic
-but the general incrementScore incorporates numbers being passed into it from whichever 
-level the targets are hit. */
+/* Below are the two different incrementation of scores. The perfect score is very
+basic but the general incrementScore incorporates numbers being passed into it 
+from whichever level the targets are hit. */
 function incrementPerfectScore(){
     let oldScore = parseInt(document.getElementById("perfectScore").innerText);
     document.getElementById("perfectScore").innerText = ++oldScore;
@@ -152,8 +152,8 @@ and runs other functions for the game to be active.
 resetDOM() is used to reset the DOM and also the countdown timer.
 replay() is used after the game has been run so that the scores can go back to zero 
 and also the DOM being reset upon the next game load.
-instructionStart() is an alternative option to replay() incase anyone playing needs to 
-review the instructions again however things still need to be reset.
+instructionStart() is an alternative option to replay() incase anyone playing needs 
+to review the instructions again however things still need to be reset.
 */
 function runGame() {
     perfectTally = 0;
@@ -223,8 +223,8 @@ function runAnimation() {
                 COUNTER.classList.add('hide');}});});
 }
 
-/* The functions below relate to the scoring of the game one starts the score (startScore)
-and also countdown timer.
+/* The functions below relate to the scoring of the game one starts the score 
+(startScore) and also countdown timer.
 stopScore() obviously stops the game by revealing the results.
 allScores() visually displays the scores achieved in the game.
 */
@@ -254,5 +254,3 @@ function allScores (){
     TARGET_TALLY_ID.innerHTML = `${targetTally} Targets Hit`;
     PERFECT_TALLY_ID.innerHTML = `${perfectPercentage}% Perfect Shots`;
 }
-
-module.exports = { incrementScore }
