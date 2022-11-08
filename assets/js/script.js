@@ -34,11 +34,11 @@ me to have 2 different types of sound effect 1 for firing and hitting a target a
 other for missing the target */
 var sfx = {
     shot: new Howl({
-    src: ["https://codegreg1.github.io/milestone_project2/gunshort.mp3"],
+    src: ["https://codegreg1.github.io/milestone_project2/assets/media/audio/gunshort.mp3"],
     autoplay: true
 }),
     miss: new Howl({
-    src: ["https://codegreg1.github.io/milestone_project2/ricochet.mp3"],
+    src: ["https://codegreg1.github.io/milestone_project2/assets/media/ricochet.mp3"],
     autoplay: true
 })};
 

@@ -110,7 +110,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fcodegreg1.github.io%2Fmilestone_1_greg_goodrem%2Fassets%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) - Results No Errors
 - [Lighthouse Report Mobile](https://codegreg1.github.io/milestone_project2/codegreg1.github.io_2022-06-20_10-37-19.html)
 - [Lighthouse Report Desktop](https://codegreg1.github.io/milestone_project2/codegreg1.github.io_2022-06-20_10-39-51.html)
-- [Wave Report](https://wave.webaim.org/report#/https://codegreg1.github.io/milestone_project2/) - There are alerts that relate to using
+- [Wave Report](https://wave.webaim.org/report#/https://codegreg1.github.io/milestone_project2/) - There are alerts that relate to possible headings however these are not 
 
 Also I used Jest Testing for automated testing I ran into a couple of problems however I isolated the file and tested seperately. You'll find the isolated function file here:
 
