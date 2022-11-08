@@ -162,10 +162,8 @@ function runGame() {
     targetTally = 0;
     resetDOM();
     startScore();
-    const H4 = document.querySelector('h4');
     FINAL_SCORE.style.fontSize = '65px';
     runAnimation();
-    H4.innerText = 'SHOOT!!!';
     NUMBERS.classList.add('in');
     NUMBERS.classList.remove('in');
     NUMBERS.classList.add('out');
