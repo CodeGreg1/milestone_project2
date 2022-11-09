@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,97 +13,106 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.4/howler.js"></script>
     <title>Milestone Project 2 Greg Goodrem</title>
 </head>
+
 <body>
     <main>
+        <!-- This is the Game screen that sits behind the other divs -->
         <div class="header">
             <h1>Carnival Shooting Gallery</h1>
-    </div>
-	<div id='flexbox'>
+        </div>
+        <div id='flexbox'>
             <h2 id="perfectScore">0</h2>
             <p class="perfect">Perfect Shots!</p>
-            <h2 id="shotTallyCurrent">0</h2>  
+            <h2 id="shotTallyCurrent">0</h2>
             <p class="shotsTaken">Shots Taken</p>
             <h2 id="score">0</h2>
             <p class="timeRemaining">Time Remaining</p>
+            <!-- Countdown timer -->
             <div class="counter">
                 <div class="nums">
-                      <span id="numbers" class="">20</span>
-                      <span>19</span>
-                      <span>18</span> 
-                      <span>17</span>
-                      <span>16</span>
-                      <span>15</span>
-                      <span>14</span>
-                      <span>13</span>
-                      <span>12</span>
-                      <span>11</span>
-                      <span>10</span>
-                      <span>9</span>
-                      <span>8</span>
-                      <span>7</span>
-                      <span>6</span>
-                      <span>5</span>
-                      <span>4</span>
-                      <span>3</span>
-                      <span>2</span>
-                      <span>1</span>
+                    <span id="numbers" class="">20</span>
+                    <span>19</span>
+                    <span>18</span>
+                    <span>17</span>
+                    <span>16</span>
+                    <span>15</span>
+                    <span>14</span>
+                    <span>13</span>
+                    <span>12</span>
+                    <span>11</span>
+                    <span>10</span>
+                    <span>9</span>
+                    <span>8</span>
+                    <span>7</span>
+                    <span>6</span>
+                    <span>5</span>
+                    <span>4</span>
+                    <span>3</span>
+                    <span>2</span>
+                    <span>1</span>
                 </div>
-                <p class="shoot">SHOOT!!!!</p>
-            </div> 
-    </div>
-    <div class='container ripple'>
-        <div id='frontrow' class="levels">
-            <div id="targetone" class="target tstyle">
-                <div class="centertarget"></div>
+                <p class="shoot">SHOOT!!!</p>
             </div>
         </div>
-        <div id='middlerow' class="levels">
-            <div id="targettwo" class="target tstyle">
-                <div class="centertarget"></div>
+        <!-- Targets for game -->
+        <div class='container ripple'>
+            <!-- Front/bottom row target -->
+            <div id='frontrow' class="levels">
+                <div id="targetone" class="target tstyle">
+                    <div class="centertarget"></div>
+                </div>
+            </div>
+            <!-- Middle row target -->
+            <div id='middlerow' class="levels">
+                <div id="targettwo" class="target tstyle">
+                    <div class="centertarget"></div>
+                </div>
+            </div>
+            <!-- Rear/Top row target -->
+            <div id='rearrow' class="levels">
+                <div id="targetthree" class="target tstyle">
+                    <div class="centertarget"></div>
+                </div>
             </div>
         </div>
-        <div id='rearrow' class="levels">
-            <div id="targetthree" class="target tstyle">
-                <div class="centertarget"></div>
+        <!-- Instructions Page -->
+        <div id="prestart" class="popupScreen visible">
+            <div>
+                <h1 class="header">Carnival Shooting Gallery</h1>
+                <h2 class="instruction">Instructions to play</h2>
+                <p>Aim & Shoot Targets, make as many as possible drop in <b>20 secs</b></p>
+                <p><b>3 points</b> on the Top Row</p>
+                <p><b>2 points</b> on the Middle Row</p>
+                <p><b>1 points</b> on the Bottom Row</p>
+                <p><b>Extra point</b> if you hit the centres!</p>
+                <p><b>Click Anywhere to start!</b></p>
+                <div class="targetstart tstyle">
+                </div>
+                <p class="signature">Greg Goodrem - Milestone Project 2</p>
             </div>
         </div>
-    </div> 
-    <div id="prestart" class="popupScreen visible">
-        <div>
-            <h1 class="header">Carnival Shooting Gallery</h1>
-            <h2 class="instruction">Instructions to play</h2>
-            <p>Aim & Shoot Targets, make as many as possible drop in <b>20 secs</b></p>
-            <p><b>3 points</b> on the Top Row</p>
-            <p><b>2 points</b> on the Middle Row</p>
-            <p><b>1 points</b> on the Bottom Row</p>
-            <p><b>Extra point</b> if you hit the centres!</p>
-            <p><b>Click Anywhere to start!</b></p>
-        <div class="targetstart tstyle">
-        </div> 
-        <p class="signature">Greg Goodrem - Milestone Project 2</p>
-        </div>
-        
-    </div>
-    <div id="scorescreen" class="popupScreen hiddenscore">
-        <div>
-            <h1 class="header">Carnival Shooting Gallery</h1>    
-        </div>
-        <h2 id="gameScore">Top Score</h2>
-        <div>
-            <div class="scores">
-                <h3 id="perfectTally">%</h3>
-                <h3 id="shotTallyID">%</h3>
-                <h3 id="targetTally">%</h3>
+        <!-- Final Score page -->
+        <div id="scorescreen" class="popupScreen hiddenscore">
+            <div>
+                <h1 class="header">Carnival Shooting Gallery</h1>
             </div>
-            <button id="replay">
-                <span>Replay</span>
-            </button>
-            <button id="instructionStart">
-                <span>Instructions</span>
-            </button>
+            <h2 id="gameScore">Top Score</h2>
+            <div>
+                <div class="scores">
+                    <h3 id="perfectTally">%</h3>
+                    <h3 id="shotTallyID">%</h3>
+                    <h3 id="targetTally">%</h3>
+                </div>
+                <button id="replay">
+                    <span>Replay</span>
+                </button>
+                <button id="instructionStart">
+                    <span>Instructions</span>
+                </button>
+            </div>
         </div>
-    </div>
     </main>
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>

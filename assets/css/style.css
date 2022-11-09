@@ -16,6 +16,9 @@ body {
     overflow: hidden;
     cursor: pointer;
 }
+main {
+    display: contents;
+}
 span {
     text-shadow: 2px 2px 2px #CE5937;
 }
@@ -68,7 +71,13 @@ p {
     width: 100%;
     margin: 20px 0px;
 }
-
+h2.instruction {
+    font-size: 30px;
+    text-shadow: 2px 2px 2px #CE5937;
+}
+.scores {
+    color: rgb(30, 30, 30);
+}
 /* Header Background image used on all screens */
 .header {
     width: 100%;
@@ -338,10 +347,10 @@ h3 {
     transform: translate(-50%, -50%) rotate(150deg);
     } 
     30% {
-    transform: translate(-50%, -50%) rotate(-20deg);
+    transform: translate(-50%, -50%) rotate(-10deg);
     }
     60% {
-    transform: translate(-50%, -50%) rotate(10deg);
+    transform: translate(-50%, -50%) rotate(5deg);
     }
     100% {
     transform: translate(-50%, -50%) rotate(0deg);
@@ -350,9 +359,6 @@ h3 {
 @keyframes goOut {
     0% {
     transform: translate(-50%, -50%) rotate(0deg);
-    }
-    60% {
-    transform: translate(-50%, -50%) rotate(20deg);
     }
     100% {
     transform: translate(-50%, -50%) rotate(-200deg);
@@ -415,17 +421,4 @@ span.circle {
         transform: translate(-50%, -50%) scale(0);
         opacity: 0.5;
     }
-}
-
-.scores {
-    color: rgb(30, 30, 30);
-}
-
-main {
-    display: contents;
-}
-
-h2.instruction {
-    font-size: 30px;
-    text-shadow: 2px 2px 2px #CE5937;
 }
