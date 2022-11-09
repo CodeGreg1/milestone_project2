@@ -12,18 +12,19 @@ The live website can be found here.
 
 ## Contents
 
--   ### [UX Experience(UX and UI)](#ux)
+-   ### [User Experience](#ux)
 -   ### [Game Research](#research)
--   ### [Design](#design)
--   ### [Wireframes](#wireframes)
+-   ### [Design Process](#design)
+-   ### [Wireframe Outlines](#wireframes)
 -   ### [Responsive Design Features](#responsive)
 -   ### [Future Features](#future)
 -   ### [Technologies used](#tech)
 -   ### [Frameworks, Libraries & Programs Used](#frameworks)
--   ### [Testing](#testing)
+-   ### [Testing & links](#testing)
+-   ### [Credits](#credit)
 -   ### [Errors and Bugs](#errors)
--   ### [Journey](#journey)
--   ### [Conclusion](#conclusion)
+-   ### [Journey through Project](#journey)
+-   ### [Personal Conclusion](#conclusion)
 
 <br>
 <a name='ux'/>
@@ -43,8 +44,8 @@ The live website can be found here.
 
     - As a Returning Visitor, I want them to be competitive with themselves and try and get the best score possible. 
     
-<br>
-<a name='research'/>
+    <br>
+    <a name='research'/>
 
 ##  Game Research  
     
@@ -57,9 +58,9 @@ I wanted to explore a retro shooting style game which would be very unique. I lo
     I hadn't seen a game like the one I designed on any of the retro sites or comsoles. 
     I thought to keep it child friendly I would use a carnival shooting style instead of a more military style shooting experience with enemy targets.
     Although this idea could develop into more development of the game.
-
-<br>
-<a name='design'/>
+    
+    <br>
+    <a name='#design'></a>
 
 ## Design 
 
@@ -78,9 +79,9 @@ I wanted to explore a retro shooting style game which would be very unique. I lo
     The target design was made to show a realistic visual for a target with the rings showing a potential score. 
     Later during my game development I thought I would keep the design however lose the scoring so it would be less complicated for the player only having to focus on the centre target and the outer white rings.
     The carnival background header was created to give the game some sort of carnival feel.
-
-<br>
-<a name='wireframes'/>
+    
+    <br>
+    <a name='wireframes'/>
 
 ## Wireframes 
 
@@ -134,8 +135,9 @@ I wanted to explore a retro shooting style game which would be very unique. I lo
     - Balsamiq was used to create the wireframes during the design process.
 - [Howler](https://howlerjs.com)
     - I used Howler to correct the issue I had with the sound effects not playing correctly.
-<br>
-<a name='credits'/>
+    
+    <br>
+    <a name='credit'/>
 
 ## Credits
 
@@ -178,7 +180,7 @@ As you can see the tests for the incrementation of the score worked as expected 
 
 -   Another bug I have is if the user decides to zoom in on the page and try and hit targets closer this actually distorts the placement of the bullet hole effect. One way in the future to address this is to make the shooting gallery change to the size of the viewing area.
 
--   I also had a bit of difficulty when initially showing the scores of the perfect scores showing the correct percentages. The problem was when the calculation could sometimes be 0/0 which would come up with a NaN however I was able to correct this by manipulating the numbers so it displayed the correct scores.  
+-   I also had a bit of difficulty when initially showing the scores of the perfect scores showing the correct percentages. The problem was when the calculation could sometimes be 0/0 which would come up with a NaN however I was able to correct this by manipulating the numbers so it displayed the correct scores.
 
 <br>
 <a name='journey'/>
