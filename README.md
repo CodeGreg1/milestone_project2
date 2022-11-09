@@ -42,9 +42,9 @@ The live website can be found here.
 -   ### Returning Visitor Goals
 
     - As a Returning Visitor, I want them to be competitive with themselves and try and get the best score possible. 
+    
 <br>
-
-<a name='research'></a>
+<a name='research'/>
 
 ##  Game Research  
     
@@ -57,8 +57,8 @@ I wanted to explore a retro shooting style game which would be very unique. I lo
     I hadn't seen a game like the one I designed on any of the retro sites or comsoles. 
     I thought to keep it child friendly I would use a carnival shooting style instead of a more military style shooting experience with enemy targets.
     Although this idea could develop into more development of the game.
-<br>
 
+<br>
 <a name='design'/>
 
 ## Design 
@@ -98,6 +98,7 @@ I wanted to explore a retro shooting style game which would be very unique. I lo
 - The game keeps score of the Total score, Perfect shots, also a shoots taken tally.
 - The game has an animated count down clock and also animated target when knocked down.
 - The game also resets the target within the different levels length as soon as the previous target disappears.
+
 <br>        
 <a name='future'/>
 
@@ -105,6 +106,7 @@ I wanted to explore a retro shooting style game which would be very unique. I lo
 -   Once a website is established I could create a highscore section which also differenciates between mobile and desktop players.    
 -   Different types of level themes.
 -   Moving targets either left or right to make it more challenging.
+
 <br>
 <a name='tech'/>
 
@@ -112,6 +114,7 @@ I wanted to explore a retro shooting style game which would be very unique. I lo
 -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
 -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 -   [Javascript](https://en.wikipedia.org/wiki/javascript)
+
 <br>
 <a name='frameworks'/>
 
@@ -132,7 +135,6 @@ I wanted to explore a retro shooting style game which would be very unique. I lo
 - [Howler](https://howlerjs.com)
     - I used Howler to correct the issue I had with the sound effects not playing correctly.
 <br>
-
 <a name='credits'/>
 
 ## Credits
@@ -140,7 +142,6 @@ I wanted to explore a retro shooting style game which would be very unique. I lo
 I was inspired by some of the course material in the 50 javascript projects in 50 days course I did to help my understanding of Javascript for some of the elements of the game. The bullet holes was inspired by a ripple button click on the course which I rewrote and adapted to how I wanted it to work. Also the animated countdown timer I wrote with a softer movement of the numbers rotating round and then disappearing.
 
 <br>
-
 <a name='testing'/>
 
 ## Testing 
@@ -178,6 +179,7 @@ As you can see the tests for the incrementation of the score worked as expected 
 -   Another bug I have is if the user decides to zoom in on the page and try and hit targets closer this actually distorts the placement of the bullet hole effect. One way in the future to address this is to make the shooting gallery change to the size of the viewing area.
 
 -   I also had a bit of difficulty when initially showing the scores of the perfect scores showing the correct percentages. The problem was when the calculation could sometimes be 0/0 which would come up with a NaN however I was able to correct this by manipulating the numbers so it displayed the correct scores.  
+
 <br>
 <a name='journey'/>
 
