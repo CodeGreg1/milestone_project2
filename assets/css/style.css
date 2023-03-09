@@ -84,7 +84,7 @@ h2.instruction {
     height: 110px;
     min-width: 360px;
     max-width: 500px;
-    background-image: url(../media/carnivalbackground.webp) ;
+    background-image: url(../media/images/carnivalbackground.webp) ;
     background-position: center; 
     background-repeat: no-repeat; 
     background-size: contain;
@@ -105,7 +105,7 @@ h2.instruction {
     align-items: center;
     justify-content: center;
     margin: auto;  
-    background-image: url(../media/targetshooting.webp) ;
+    background-image: url(../media/images/targetshooting.webp) ;
     background-color: white;
     background-position: center; 
     background-repeat: no-repeat; 

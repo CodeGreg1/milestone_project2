@@ -8,7 +8,7 @@ The live website can be found here.
 
 [View the live project here.](https://codegreg1.github.io/milestone_project2/)
 
-<h2 align="center"><img src="assets/media/mock-up.png"></h2>
+<h2 align="center"><img src="assets/media/readme-images/mock-up.png"></h2>
 
 ## Contents
 
@@ -25,6 +25,7 @@ The live website can be found here.
 -   ### [Errors and Bugs](#errors)
 -   ### [Journey through Project](#journey)
 -   ### [Personal Conclusion](#conclusion)
+-   ### [Deployment](#deployment)
 
 <br>
 <a name='ux'/>
@@ -85,9 +86,9 @@ I wanted to explore a retro shooting style game which would be very unique. I lo
 
 ## Wireframes 
 
--   Initial/Instruction Screen Wireframe - [View](https://codegreg1.github.io/milestone_project2/assets/media/projectWireframeInitialScreen.png)
--   Game Display Screen Wireframe - [View](https://codegreg1.github.io/milestone_project2/assets/media/projectWireframeGameScreen.png)
--   Score Screen Wireframe - [View](https://codegreg1.github.io/milestone_project2/assets/media/projectWireframeScoreScreen.png)
+-   Initial/Instruction Screen Wireframe - [View](https://codegreg1.github.io/milestone_project2/assets/media/readme-images/projectWireframeInitialScreen.png)
+-   Game Display Screen Wireframe - [View](https://codegreg1.github.io/milestone_project2/assets/media/readme-images/projectWireframeGameScreen.png)
+-   Score Screen Wireframe - [View](https://codegreg1.github.io/milestone_project2/assets/media/readme-images/projectWireframeScoreScreen.png)
 
 <br>
 <a name='responsive'/>
@@ -166,7 +167,7 @@ Below is the link to the Testing Script which came out with a result of 5 of 5 t
 [Jest Test Script](https://codegreg1.github.io/milestone_project2/assets/js/script.test.js)
 
 
-<h2 align="center"><img src="assets/media/jestTestResults.png"></h2>
+<h2 align="center"><img src="assets/media/readme-images/jestTestResults.png"></h2>
 As you can see the tests for the incrementation of the score worked as expected after testing and breaking the code then resolving it. The same was true for the Shot Tally increase.
 
 <br>
@@ -190,13 +191,13 @@ As you can see the tests for the incrementation of the score worked as expected 
 #### I feel I have made some big leaps in programming as the project initially started out as it looks below. I was figuring out how to move the targets from one place to another with animation to the final project with a much better game feel to it.
 
 Below is where I started and experimented with javascript.
-<img src="assets/media/initialLayout.jpg">
+<img src="assets/media/readme-images/initialLayout.jpg">
 
 Below is where it led before I got to my final design
-<img src="assets/media/secondPhase.jpg">
+<img src="assets/media/readme-images/secondPhase.jpg">
 
 Below is my final design with lots of additions and counters for that true game feel.
-<img src="assets/media/finalPhase.png">
+<img src="assets/media/readme-images/finalPhase.png">
 
 <br>
 <a name='conclusion'/>
@@ -211,3 +212,44 @@ Below is my final design with lots of additions and counters for that true game 
 -   Sound effects for shots hit and missed
 
 Areas I could improve is having different skins for the game so it could be e.g. zombies popping up or classic figure 11 or 12 targets for military.
+
+
+<br>
+<a name='conclusion'/>
+
+## Deployment
+
+### GitHub Pages
+
+I deployed the project onto GitHub Pages using the following steps:
+
+1. Go to my GitHub repository for the project this is the link. [My GitHub Repository for Milestone 1 Project](https://github.com/CodeGreg1/milestone_1_greg_goodrem)
+2. Locate the 'Settings' button for the repository and click.
+3. Scroll down the Settings page until you see the "Pages" Section on your left.
+4. You need to change the "Source", by clicking the dropdown and choose "deploy from a branch".
+5. You then need to change branch from 'None' to 'main'.
+7. The page will automatically refresh.
+7. At the top of the 'Pages' section, look to locate the now published site [Milestone 2 Repository](https://codegreg1.github.io/milestone_project2/).
+
+### Forking the GitHub Repository
+
+You can fork the GitHub Repository and make a copy of the original repository on your GitHub account so you can view or change elements without affecting the original repository.
+
+1. Log in to GitHub and locate the [Milestone 2 Repository](https://codegreg1.github.io/milestone_project2/)
+2. Above the Settings tab and to the right you'll see a dropdown labelled "Fork".
+3. This will give you a copy of the original repository in your GitHub account.
+
+### Making a Local Clone
+
+1. Log in to GitHub and locate the [Milestone 2 Repository](https://codegreg1.github.io/milestone_project2/)
+2. Locate the green 'Code' button.
+3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+4. Open Git Bash.
+5. Change to your working directory where you want the clone to go.
+6. Type `git clone`, and then paste the URL you copied in Step 3.
+7. Press Enter. Your local clone will now be created.
+
+
+
+
+
